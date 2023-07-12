@@ -1,0 +1,22 @@
+.titulo{
+    display:flex;
+    justify-content: center;
+}
+.medio{
+    display: flex;
+    justify-content:center;
+}
+body{
+    padding: 25%;
+}
+.contenedor{
+    border:solid black 2px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.buttom{
+    display:flex;
+    justify-content:center;
+}
