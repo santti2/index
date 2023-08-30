@@ -1,8 +1,33 @@
-#fondo{
-    background-color:palevioletred;
+body {
+  background: linear-gradient(black, rgb(70, 4, 70));
 }
-h1{
-    color:white;
-    display:flex;
-    justify-content: center;
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  gap: 4rem;
+  grid-auto-rows: auto;
+  padding-inline-start: 0px;
+}
+img {
+  width: 100%;
+  aspect-ratio: 1 / 2;
+  object-fit: cover;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  border: solid black 8px;
+  transition: scale 0.2s ease-in;
+  color: white;
+}
+li:hover {
+  scale: calc(1.1);
 }

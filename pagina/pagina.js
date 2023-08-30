@@ -1,51 +1,69 @@
-const movie = [{
-    name: 'legomovie',
-    ano: 2014 ,
-    img: "https://www.imdb.com/title/tt1490017/mediaviewer/rm712541697/?ref_=tt_ov_i"
-},{
-    name: 'terminator2',
-    ano: 1991 ,
-    img: "https://www.imdb.com/title/tt0098321/mediaviewer/rm3230404096/?ref_=tt_ov_i"
-    
-},{
-    name: 'metegol',
-    ano: 2013 ,
-    img: "https://www.imdb.com/title/tt1634003/mediaviewer/rm3296503552/?ref_=tt_ov_i"
-},{
-    name: 'cars',
-    ano: 2006 ,
-    img:"https://www.imdb.com/title/tt0317219/mediaviewer/rm3794114560/?ref_=tt_ov_i"
-},{
-    name: 'cars 3' ,
+const movie = [
+  {
+    name: "legomovie",
+    ano: 2014,
+    img: "https://m.media-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_.jpg",
+  },
+  {
+    name: "terminator2",
+    ano: 1991,
+    img: "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+  },
+  {
+    name: "metegol",
+    ano: 2013,
+    img: "https://media.a24.com/p/eb14870c8dbb60b8912bfe40d2f8f268/adjuntos/296/imagenes/008/555/0008555645/1200x675/smart/metegol-netflixpng.png",
+  },
+  {
+    name: "cars",
+    ano: 2006,
+    img: "https://m.media-amazon.com/images/M/MV5BMzY1MjI1NjkwMl5BMl5BanBnXkFtZTcwMzQ0MTQyMw@@._V1_.jpg,",
+  },
+  {
+    name: "cars 3",
     ano: 2017,
-    img:"https://www.imdb.com/title/tt3606752/?ref_=hm_tpks_tt_i_12_pd_tp1_pbr_ic"
-},{
-    name: 'hombrearana',
-    ano: 2002 ,
-    img:"https://www.imdb.com/title/tt0145487/mediaviewer/rm4179401729/?ref_=tt_ov_i"
-},{
-    name: 'Dragon Ball Super: Super Hero',
-    ano: 2022 ,
-    img:"https://www.imdb.com/title/tt14614892/mediaviewer/rm1841174273/?ref_=tt_ov_i"
-},{
-    name: 'Crepusculo',
-    ano: 2008 ,
-    img:"https://www.imdb.com/title/tt1099212/mediaviewer/rm1333687552/?ref_=tt_ov_i"
-}]
-
-array.map((item)=> {
+    img: "https://es.web.img2.acsta.net/pictures/17/06/09/13/42/187933.jpg",
+  },
+  {
+    name: "hombrearana",
+    ano: 2002,
+    img: "https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_.jpg",
+  },
+  {
+    name: "Dragon Ball Super: Super Hero",
+    ano: 2022,
+    img: "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/98ea4207e23a2ea3e3af39ad641d8800.jpe",
+  },
+  {
+    name: "Crepusculo",
+    ano: 2008,
+    img: "https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2020/05/04/5fa91af7b3bdb.r_d.496-279-0.jpeg",
+  },
+];
+function peliculas() {
+  const elemento = document.getElementById("contenedor");
+  movie.map((item) => {
     const img = document.createElement("img");
-    const nombre = document.createElement("nombre");
-    const ano = document.createElement("ano");
-    const listelement = document.createElement("elem");
-    
-    nombre.textContent = item.nombre;
+    const nombre = document.createElement("h1");
+    const ano = document.createElement("p");
+    const listelement = document.createElement("li");
+
+    nombre.textContent = item.name;
     img.src = item.img;
-    ano.textContent = `fecha_de_Estreno ${item.ano}`;
-    
-    listelement.appendChild("img")
-    listelement.appendChild("nombre")
-    listelement.appendChild("ano")
-    
-    list.appendChild(listelement)
-    }) 
+    ano.textContent = `fecha de Estreno ${item.ano}`;
+
+    listelement.appendChild(img);
+    listelement.appendChild(nombre);
+    listelement.appendChild(ano);
+
+    elemento.appendChild(listelement);
+  });
+}
+
+function unload() {
+  generateitemsHTML();
+}
+
+function generateitemsHTML() {
+  const itemscontainer = document.querySelector("");
+}
